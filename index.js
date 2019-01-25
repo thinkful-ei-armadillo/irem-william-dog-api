@@ -32,7 +32,8 @@ function dogImageDisplay(response) {
 function getRandomBreedImage() {
   return fetch('https://dog.ceo/api/breed/hound/images/random')
     .then(response => response.json())
-    .then(responseJson => dogDisplayRandomBreed(responseJson));
+    .then(responseJson => dogDisplayRandomBreed(responseJson))
+    .catch(error => alert('ERROR. Try again!'));
 }
 
 
